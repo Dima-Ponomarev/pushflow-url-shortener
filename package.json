@@ -4,19 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "tsc && npx ts-node ./node_modules/.bin/knex migrate:latest && node dist/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "nanoid": "^5.0.8",
-    "pg": "^8.13.1"
+    "knex": "^3.1.0",
+    "nanoid": "^3.3.7",
+    "pg": "^8.13.1",
+    "redis": "^4.7.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
 }
