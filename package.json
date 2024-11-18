@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && npx ts-node ./node_modules/.bin/knex migrate:latest && node dist/app.js"
+    "start": "npm i && tsc && npx ts-node ./node_modules/.bin/knex migrate:latest && node dist/app.js"
   },
   "keywords": [],
   "author": "",
